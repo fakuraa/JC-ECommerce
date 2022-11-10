@@ -1,4 +1,4 @@
-package com.fakura.ecommerce.modul.home.widgets
+package com.fakura.ecommerce.modul.home.section.body
 
 import android.os.SystemClock
 import androidx.compose.foundation.Image
@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fakura.ecommerce.R
 import com.fakura.ecommerce.model.getStuffs
+import com.fakura.ecommerce.modul.home.section.component.StuffWidget
 import com.fakura.ecommerce.resource.theme.hintColor
 import com.fakura.ecommerce.resource.theme.primaryColor
 import com.fakura.ecommerce.resource.theme.whiteColor
@@ -46,7 +47,8 @@ fun FlashSaleHeader(){
             Spacer(Modifier.width(14.dp))
             Box (Modifier.background(color = Color.Black.copy(0.5f)).padding(2.dp).width(70.dp)
                 .clip(RoundedCornerShape(10.dp)), Alignment.Center){
-                Text(rememberCountdownTimerState(82400000L),
+                Text(
+                    rememberCountdownTimerState(82400000L),
                     fontWeight = FontWeight.Bold, color = whiteColor, fontSize = 14.sp)
             }
         }

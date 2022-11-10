@@ -1,4 +1,4 @@
-package com.fakura.ecommerce.modul.home.widgets
+package com.fakura.ecommerce.modul.home.section.body
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -14,10 +14,13 @@ import com.fakura.ecommerce.model.Stuff
 import com.fakura.ecommerce.model.Trend
 import com.fakura.ecommerce.model.getStuffs
 import com.fakura.ecommerce.model.getTrends
+import com.fakura.ecommerce.modul.home.section.component.Chips
+import com.fakura.ecommerce.modul.home.section.component.StuffWidget
 import com.fakura.ecommerce.resource.theme.primaryColor
 import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.SizeMode
+
 
 private val data = mutableStateListOf<Stuff>()
 
@@ -27,6 +30,7 @@ fun TopProductWidget() {
     Column {
         val selectedId = remember { mutableStateOf("1") }
         val chips = remember { mutableListOf<Trend>() }
+
         chips.addAll(getTrends())
 
             Text("Top Daily Product",

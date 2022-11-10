@@ -1,4 +1,4 @@
-package com.fakura.ecommerce.modul.home.widgets
+package com.fakura.ecommerce.modul.home.section.component
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image

@@ -8,16 +8,15 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.fakura.ecommerce.model.Stuff
 import com.fakura.ecommerce.model.getCategorys
-import com.fakura.ecommerce.model.getStuffs
-import com.fakura.ecommerce.modul.home.widgets.*
+import com.fakura.ecommerce.modul.home.section.body.CategoryWidget
+import com.fakura.ecommerce.modul.home.section.body.FlashSaleWidget
+import com.fakura.ecommerce.modul.home.section.body.TopProductWidget
+import com.fakura.ecommerce.modul.home.section.header.AppBar
+import com.fakura.ecommerce.modul.home.section.header.Banner
 import com.fakura.ecommerce.resource.theme.ECommerceTheme
 import com.fakura.ecommerce.resource.theme.backgroundColor
 import com.fakura.ecommerce.resource.theme.whiteColor
@@ -29,7 +28,6 @@ fun HomeScreen(navController: NavController){
         Scaffold (){
             Surface(color = backgroundColor,
                 modifier = Modifier.padding(it)) {
-
                 BoxWithConstraints (
                     modifier =Modifier
                         .background(color = backgroundColor)
@@ -37,7 +35,8 @@ fun HomeScreen(navController: NavController){
                     val boxWidth = this.maxWidth
                     Box (
                         modifier = Modifier
-                            .width(boxWidth).padding(top = 60.dp)
+                            .width(boxWidth)
+                            .padding(top = 60.dp)
                             .background(backgroundColor)){
                         MainContent(navController = navController)
                     }

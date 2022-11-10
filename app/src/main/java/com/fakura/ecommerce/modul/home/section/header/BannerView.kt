@@ -1,4 +1,4 @@
-package com.fakura.ecommerce.modul.home.widgets
+package com.fakura.ecommerce.modul.home.section.header
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
